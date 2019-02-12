@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+   <link rel="stylesheet" href="style.css">
+
+   <title>Vending Machine</title>
+</head>
+
+<body>
+
+   <header>
+      <h1> Vending Machine </h1>
+      <div class="container">
+         <div class="row">
+            <div onclick="app.cotrollers.vendrController.charge(1)" class="div-col-sm-12-md-3">A1 - $1
+               <button id="A1">
+                  <img
+                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs5tscOtZmcgYpQeW0_efoM-e2eW17ULwptipEiR5B8_x44ltH">
+               </button>
+            </div>
+         </div>
+
+
+         <div class="container">
+            <div class="row">
+               <div onclick="app.controllers.vendrController.charge(1.00)" class="div-col--sm-12-md-3">B1 - $1
+                  <button id="B1">
+                     <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReDVW_p3xhkfzmakG-ssl1LRc-UElCF-5MWrvd0x9E16YF6_4Yww">
+                  </button>
+               </div>
+            </div>
+         </div>
+
+         <div class="container">
+            <div class="row">
+
+               <div onclick="app.controllers.vendrController.charge(1.00)" class="div-col-sm-12-md-3">C1 - $1
+                  <button id="C1">
+                     <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhrEif4FqyabE17D41ASS1YEnaZzKdVGV3QOH4_tLJq83nFLDU">
+                  </button>
+               </div>
+            </div>
+         </div>
+
+         <div onclick="app.controllers.vendrController.charge(1.00)" class="div-col-sm-12-md-3">D1 - $1
+            <button id="D1">
+               <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXmFTuxG9wBFNFe878kuE6zyc7H47wM16MSteYXlheJth7TaqR">
+            </button>
+
+         </div>
+
+         <div>
+            <h1> Charge $<span id="bal">-</span></h1>
+            <button onclick="app.controllers.vendrController.charge()"> Cash</button>
+            <button onclick="app.controllers.vendrController.charge()"> Credit Card</button>
+            <button onclick="app.controllers.vendrController.charge()"> Debit Card</button>
+
+         </div>
+      </div>
+   </header>
+
+
+
+   <script type="models" src="app/components/models/main.js">
+   </script>
+</body>
+
+</html>
