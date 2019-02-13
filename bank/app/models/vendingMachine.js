@@ -1,4 +1,4 @@
-import Snack form "./snack.js";
+import Snack from "./snack.js";
 
 
 

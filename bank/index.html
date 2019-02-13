@@ -7,7 +7,7 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="assets/style.css">
 
    <title>Vending Machine</title>
 </head>
@@ -18,7 +18,7 @@
       <h1> Vending Machine </h1>
       <div class="container">
          <div class="row">
-            <div onclick="app.cotrollers.vendrController.charge(1)" class="div-col-sm-12-md-3">A1 - $1
+            <div onclick="app.controllers.vendrController.charge(1)" class="div-col-sm-12-md-3">A1 - $1
                <button id="A1">
                   <img
                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs5tscOtZmcgYpQeW0_efoM-e2eW17ULwptipEiR5B8_x44ltH">
@@ -29,7 +29,7 @@
 
          <div class="container">
             <div class="row">
-               <div onclick="app.controllers.vendrController.charge(1.00)" class="div-col--sm-12-md-3">B1 - $1
+               <div onclick="app.controllers.vendrController.charge(1)" class="div-col--sm-12-md-3">B1 - $1
                   <button id="B1">
                      <img
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReDVW_p3xhkfzmakG-ssl1LRc-UElCF-5MWrvd0x9E16YF6_4Yww">
@@ -41,7 +41,7 @@
          <div class="container">
             <div class="row">
 
-               <div onclick="app.controllers.vendrController.charge(1.00)" class="div-col-sm-12-md-3">C1 - $1
+               <div onclick="app.controllers.vendrController.charge(1)" class="div-col-sm-12-md-3">C1 - $1
                   <button id="C1">
                      <img
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhrEif4FqyabE17D41ASS1YEnaZzKdVGV3QOH4_tLJq83nFLDU">
@@ -50,7 +50,7 @@
             </div>
          </div>
 
-         <div onclick="app.controllers.vendrController.charge(1.00)" class="div-col-sm-12-md-3">D1 - $1
+         <div onclick="app.controllers.vendrController.charge(1)" class="div-col-sm-12-md-3">D1 - $1
             <button id="D1">
                <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXmFTuxG9wBFNFe878kuE6zyc7H47wM16MSteYXlheJth7TaqR">
@@ -70,7 +70,7 @@
 
 
 
-   <script type="models" src="app/components/models/main.js">
+   <script type="module" src="app/main.js">
    </script>
 </body>
 

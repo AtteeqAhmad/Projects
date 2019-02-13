@@ -2,12 +2,19 @@ import VendrService from "./vendrService.js";
 
 // private 
 
-let VendrController = new VendrService
+let vendrService = new VendrService()
+
+function draw() {
+   console.log();
+   let v = vendrService.charge
+}
 
 //public
 export default class VendrController {
 
    charge(amount) {
       console.log(amount)
+
+      vendrService.charge()
    }
 }
