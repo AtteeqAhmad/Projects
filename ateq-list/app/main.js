@@ -1,11 +1,4 @@
-//private 
-
-
-
-
-
-//public
-
+import carController from "./components/carcontroller.js";
 
 
 class App {
@@ -17,4 +10,5 @@ class App {
 }
 
 
-window.app = new.window
+//this connects main to index.html
+window.app = new App()

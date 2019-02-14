@@ -5,7 +5,8 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <link rel="stylesheet" href="style.css">
 
 
@@ -17,21 +18,30 @@
 <body>
 
    <section class="container-fluid">
-      <header>
-         <section>
-            <form onsubmit="app.controller.carController.addCar(event)">
-               <input type="text" name="title" placeholder="Title">
-               <input type="text" placeholder="description">
-               <input type="number" placeholder="price">
-               <input type="url" name="" placeholder="Image">
-               <button type="button"> Submit </button>
-            </form>
-            <!--Add car from here-->
-         </section>
+      <header class="row">
+         <div class="col text-center">
+            <h1> Welcome to Ateq List</h1>
+         </div>
       </header>
+
+
+      <section>
+         <form onsubmit="app.controller.carController.addCar(event)">
+            <input type="text" name="title" placeholder="Title" required>
+            <input type="text" name="description" placeholder="Description" required>
+            <input type="number" name="price" placeholder="price" required>
+            <input type="url" name="img" placeholder="Image" required>
+            <button type="button"> Submit </button>
+         </form>
+         <!--Add car from here-->
+      </section>
       <main class="row" id="available-car">
-         <div class="car-img-top" src=" " </main> </section> <script type="module" src='app/main.js'>
-         </script>
+      </main>
+   </section>
+
+   <!-- This starts the JavaScript -->
+   <script type="module" src='app/main.js'>
+   </script>
 
 </body>
 

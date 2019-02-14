@@ -1,12 +1,12 @@
 import CarService from "./carServices.js";
 
 //private
-
+//INSTANTIATES CARSERVICE
 let cs = new CarService()
 
 
 function draw() {
-   let cars = _cs.cars
+   let cars = _cs.Cars
    let template = ''
    car.forEach(car => {
       template += cars.getTemplate()
@@ -16,13 +16,13 @@ function draw() {
 
 //public
 
-exprot default class CarController {
-   //any form submission  do not forget to prevent the default action
-   get Car(event) {
-
-      return _cars
-
+export default class CarController {
+   constructor() {
+      _cs.addSubscriber('cars', draw)
+      _cs.addSubscriber('cars', logCars)
+      draw()
    }
+   //any form submission  do not forget to prevent the default action
    addCar(event) {
       event.preventDefault();
       let form = event.target
@@ -36,10 +36,8 @@ exprot default class CarController {
       _cs.addCar(newcar)
       //clears the form
       form.reset()
-      draw()
    }
    deleteCar(id) {
       _cs.deleteCar(id)
-      draw()
    }
 }

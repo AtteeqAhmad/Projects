@@ -2,7 +2,9 @@
 // state is the object that contains all data
 let _state = {
    cars: [
-
+      new Car({ price: 1000, title: 'A Stealthy Car', img: 'https://images-na.ssl-images-amazon.com/images/I/410jkSdCl0L._SL500_AC_SS350_.jpg', description: 'cops and robbers both hate him' }),
+      new Car({ price: 1500, title: 'A Classic' img: 'https://media.npr.org/assets/img/2011/05/31/FordPinto_wide-aa4b7f14f4dde2bc2b9fd16e77003fb01626dee2-s800-c85.jpg', description: 'Just don\'t hit it from behind' }),
+      new Car({ price: 100, title: 'just it' img: 'https://media.npr.org/assets/img/2011/05/31/FordPinto_wide-aa4b7f14f4dde2bc2b9fd16e77003fb01626dee2-s800-c85.jpg', description: 'Just don\'t hit it from behind' })
    ]
 }
 
@@ -16,14 +18,8 @@ let _subscribers = {
 function setState(dataName, Value) {
    _state[dataName] = Value
    //for Each function in the subscribrs envoke the function
-   _subscribers[dataName].push(fn)
+   _subscribers[dataName].forEach(fn => fn());
 }
-
-let _cars = [
-   new Car(1000, "://https:car.image"),
-   new Car(1500, 'A classic', ":https//:car.img"),
-   new Car()
-]
 
 //public
 export default class CarService {
@@ -33,37 +29,26 @@ export default class CarService {
    }
 
    get Cars() {
-      return _cars
+      return _state.cars
    }
 
    addcar(rawCar) {
       let newcar = new Car(rawCar)
-
-   }
-   constructor() {
-      draw()
-      get CarService() {
-         return _cars
-      }
-
+      _state.cars.push(newCar)
+      setState('cars', _state.cars)
    }
 
-   addcar(rawCar) {
-      let newCar = new Car(rawCar.price, rawCar.title, rawCar.)
-   }
    deletecar(id) {
       //let cartoDelete = _cars.find(car => car.id == id)
       //let indextoRemove = _cars.indexOf(cartoDelete)
       //otherwise
-
-      for (let i = 0; < _cars.length; i++) {
-         let car = _cars[i];
+      for (let i = 0; i < _state.cars.length; i++) {
+         let car = _state.cars[i];
          if (car.id == id) {
-            _cars.splice(i, 1)
+            _state.cars.splice(i, 1)
             break;
          }
       }
-      _cars.splice(indextoRemove, 1)
-
+      setState('cars', _state.cars)
    }
 }
