@@ -6,7 +6,12 @@ function drawSongs() {
   //changes button back to GET MUSIC once songs are loaded
   document.querySelector('#get-music-button').textContent = 'GET MUSIC'
   console.log(itunesService.Songs)
-
+  let _is = itunesService.Songs
+  let template = ''
+  _is.forEach(song => {
+    template += song.getTemplate()
+  });
+  document.getElementById("songs").innerHTML = template
 }
 
 
@@ -14,6 +19,7 @@ function drawSongs() {
 class ItunesController {
   constructor() {
     //BE SURE TO REGISTER YOUR SUBSCRIBERS!!!!!!!
+    itunesService.addSubscriber("songs", drawSongs)
   }
 
 
