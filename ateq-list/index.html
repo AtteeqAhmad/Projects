@@ -20,25 +20,25 @@
    <section class="container-fluid">
       <header class="row">
          <div class="col text-center">
+
             <h1> Welcome to Ateq List</h1>
          </div>
       </header>
 
+<div>
+   <button onclick="app.controllers.carController.getCars()">Cars</button>
+   <button onclick="app.controllers.houseController.getHouses()">Houses</button>
+   <button onclick="app.controllers.jobController.getjobs()">Job</button>
+</div>
+      </section id="form-content">
+   
+   </section>
 
-      <section>
-         <form onsubmit="app.controller.carController.addCar(event)">
-            <input type="text" name="title" placeholder="Title" required>
-            <input type="text" name="description" placeholder="Description" required>
-            <input type="number" name="price" placeholder="price" required>
-            <input type="url" name="img" placeholder="Image" required>
-            <button type="button"> Submit </button>
-         </form>
-         <!--Add car from here-->
-      </section>
-      <main class="row" id="available-car">
+      <main class="row" id="available-content"></main>
       </main>
    </section>
 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
    <!-- This starts the JavaScript -->
    <script type="module" src='app/main.js'>
    </script>

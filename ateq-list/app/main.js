@@ -1,10 +1,16 @@
-import carController from "./components/carcontroller.js";
+import carController from "./components/car/carcontroller.js";
+import HouseController from "./components/House/houseController.js";
+import jobController from "./components/Jobs/jobController.js";
+
+
 
 
 class App {
    constructor() {
       this.controllers = {
-         carController: new carController()
+         carController: new carController(),
+         houseController: new HouseController(),
+         jobController: new jobController()
       }
    }
 }
