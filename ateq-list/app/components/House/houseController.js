@@ -1,11 +1,13 @@
+import HouseService from "./houseService.js";
+
 //private
- import HouseService from "./houseService.js";
+//  import HouseService from "../../House/houseService.js";
 
  let _hs = new HouseService()
 
  function draw() {
      let template = ''
-     _hs.Houses.forEach(h => {
+     _hs.houses.forEach(h => {
          template += h.getTemplate()
      })
      document.getElementById('availabe-content').innerHTML = template

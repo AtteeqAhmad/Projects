@@ -8,13 +8,13 @@ export default class Car {
       this.model = data.model
       this.price = parseInt(data.price).toFixed(2)
       this.year = data.year
-      this.imgURL = data.imgURL
+      this.imgURL = data.imgUrl
       this.description = data.description || 'No Description Provided'
       id++
    }
 
 
-   gettemplate() {
+   getTemplate() {
       return `
       <div class="card col-3">
          <img class="card-img-top" src="${this.imgURL}" alt="Card image cap">

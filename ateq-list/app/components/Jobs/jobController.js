@@ -1,13 +1,13 @@
 import JobService from "./jobService.js";
 
 //private
-let jc = new JobService() 
+let _jc = new JobService() 
 
 
 function draw() {
-    let job = _cs.Job
+    let jobs = _jc.Jobs
     let template = ''
-    job.forEach(car => {
+    jobs.forEach(job => {
         template += job.getTemplate()
     });
     document.getElementById('available-content').innerHTML = template
@@ -30,7 +30,7 @@ function logjobs() {
 // PUBLIC
 export default class jobController {
     constructor() {
-        _jc.addSubscriber('jobs', draw);
+        _jc.addSubscriber('Jobs', draw);
         _jc.getApiJobs()
     }
 

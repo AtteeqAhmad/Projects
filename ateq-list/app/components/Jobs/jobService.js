@@ -1,4 +1,4 @@
-import job from "../../models/job.js";
+import Job from "../../models/job.js";
 
 
 let _api = axios.create({
@@ -6,11 +6,11 @@ let _api = axios.create({
 })
 
 let _state = {
-    jobs: []
+    Jobs: []
 }
 
 let _subscribers = {
-    jobs: []
+    Jobs: []
 }
 
 function setState(prop, value) {
@@ -26,16 +26,16 @@ function setState(prop, value) {
     
     }
 
-    get houses() {
-        return _state.job.map(h => new Job(h))
+    get Jobs() {
+        return _state.Jobs.map(j => new Job(j))
 
     }
 
-    getApiJob() {
+    getApiJobs() {
         _api.get('jobs')
         .then(res => {
-            let data = res.data.data.map(h => new Jobs(h))
-            setState('jobs', data)
+            let data = res.data.data.map(h => new Job(h))
+            setState('Jobs', data)
         })
     }
  }

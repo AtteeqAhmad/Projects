@@ -35,7 +35,7 @@ export default class HouseService  {
     getApiHouses() {
         _api.get('houses')
         .then(res => {
-            let data = res.data.data.map(h => new Houses(h))
+            let data = res.data.data.map(h => new House(h))
             setState('houses', data)
         })
     }

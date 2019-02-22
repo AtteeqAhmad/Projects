@@ -6,9 +6,9 @@ let _cs = new CarService()
 
 
 function draw() {
-   let cars = _cs.Cars
+   let car = _cs.Cars
    let template = ''
-   car.forEach(car => {
+   car.forEach(cars => {
       template += cars.getTemplate()
    });
    document.getElementById('available-content').innerHTML = template

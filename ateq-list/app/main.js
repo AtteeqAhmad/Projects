@@ -17,4 +17,4 @@ class App {
 
 
 //this connects main to index.html
-window.app = new App()
+window.app = new App();

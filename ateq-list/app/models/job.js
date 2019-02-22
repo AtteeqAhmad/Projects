@@ -9,7 +9,7 @@ this.jobtitle = data.jobtitle
  this.description = data.description
     }
     
-    gettemplate() {
+    getTemplate() {
         return `
         <div class="card col-3">
         <h2>${this.company} ${this.jobtitle}</h2>
