@@ -10,25 +10,36 @@
 	<title>Inspire</title>
 </head>
 
-<body class="container" id="bg-image">
+<body id="bg-image">
+	<header class="container-fluid">
+	<div class="row">
+			<div class="col-3" id="weather">
+				Your Weather Template
+			</div>
+		</div>
+</header>
 
-
-	<div id="weather">
-		Your Weather Template
-	</div>
-
-	<div id="quote">
+<main class="row">
+	<div class="col-8" id="quote">
 		The Quote
 	</div>
-
-	<div>
+</main>
+	
+<footer class="row">
+	<div class="col-6">
 		A Todo List
 		<div id="todo-error"></div>
-		<form onsubmit=""></form>
+		<form onsubmit="app.controller.todoController.addToDo(event)">
+			<div class="form-group">
+				<input type="text" class="form-control" id="description" placeholder="Description">
+				<button type="submit">Add List</button>
+			</div>
+		</form>
 		<div id="todos"></div>
 	</div>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+</footer>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script type="module" src="app/main.js"></script>
 </body>
 

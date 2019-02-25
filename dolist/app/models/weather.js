@@ -1,5 +1,7 @@
 export default class Weather {
   constructor(data) {
+    this.description = data.description
+    this._id = data._id
     console.log('[RAW WEATHER API DATA]', data);
 
     // HEY FUN FACT 
