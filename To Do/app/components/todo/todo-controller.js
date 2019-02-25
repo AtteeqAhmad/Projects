@@ -5,7 +5,7 @@ const _todoService = new TodoService()
 function _drawTodos() {
 	//WHAT IS MY PURPOSE?
 	let todo = ''
-	_tod
+	document.
 }
 
 function _drawError() {
