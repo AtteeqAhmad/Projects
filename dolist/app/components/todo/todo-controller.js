@@ -25,12 +25,12 @@ export default class TodoController {
 
 	addTodo(event) {
 		event.preventDefault()
-		var form = e.target
+		var form = event.target
 		var todo = {
 			description: form.description.value
 		}
-		_todoService.addTodo(todo)
 		form.reset()
+		_todoService.addTodo(todo)
 			// DONT FORGET TO BUILD YOUR TODO OBJECT
 		}
 	toggleTodoStatus(todoId) {

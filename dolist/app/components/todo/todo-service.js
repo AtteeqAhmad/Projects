@@ -2,7 +2,7 @@
 
 import Todo from "../../models/todo.js"
 const todoApi = axios.create({
-	baseURL: 'https://bcw-sandbox.herokuapp.com/api/jake/todos/',
+	baseURL: 'https://bcw-sandbox.herokuapp.com/api/atteeq/todos/',
 	timeout: 3000
 });
 
@@ -56,14 +56,18 @@ export default class TodoService {
 		// Be sure to change the completed property to its opposite
 		// todo.completed = !todo.completed <-- THIS FLIPS A BOOL
 
+		//DO YOU WANT TO DO ANYTHING WITH THIS?
 		todoApi.put(todoId, todo)
 			.then(res => {
-				//DO YOU WANT TO DO ANYTHING WITH THIS?
 			})
 			.catch(err => _setState('error', err.response.data))
 	}
 
 	removeTodo(todoId) {
+		todoApi.delete(todoId)
+		.then(res => {
+			this.getTodos()
+		})
 		// This one is on you to write.... 
 		// The http method is delete at the todoId
 	}
