@@ -11,31 +11,39 @@
 </head>
 
 <body id="bg-image">
-	<header class="container-fluid">
+	<header class="container">
 	<div class="row">
 			<div class="col-3" id="weather">
 				Your Weather Template
 			</div>
 		</div>
-</header>
-
-<main class="row">
-	<div class="col-8" id="quote">
-		The Quote
-	</div>
-</main>
-	
-<footer class="row">
-	<div class="col-6">
-		A Todo List
-		<div id="todo-error"></div>
-		<form onsubmit="app.controllers.todoController.addTodo(event)">
-			<div class="form-group">
-				<input type="text" class="form-control" id="description" placeholder="Description">
-				<button type="submit">Add List</button>
+	</header>
+		
+		<main class="container">
+			<div class="row">
+				<div class="col-8" id="quote">
+					The Quote
+				</div>
 			</div>
-		</form>
-		<div id="todos"></div>
+		</main>
+
+<footer class="container">
+	<div class="row">
+		<div class="col-6">
+			<div id="todo-error">
+
+				A Todo List
+				<form onsubmit="app.controllers.todoController.addTodo(event)">
+						<div class="form-group">
+							<input type="text" class="form-control" id="description" placeholder="Description">
+							<button type="submit">Add List</button>
+						</div>
+					</form>
+				</div>
+			<div id="todos">
+		</div>
+
+		</div>
 	</div>
 </footer>
 	

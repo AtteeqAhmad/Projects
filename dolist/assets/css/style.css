@@ -3,8 +3,39 @@
   font-size: 2em;
 }
 
-body {
+body { 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#bg-image {
+background-attachment: fixed;
+background-size: cover;
+height: 100vh;
+background-color: rgb(216, 213, 41);
+}
+
+.weather {
+  background-color: rgb(201, 228, 52);
+  color: rgb(0, 0, 0);
+  text-shadow: 3 3 3px black;
+}
+
+
+#todo-error {
   color: white;
-  text-shadow: -1 -1 black;
-  font-size: 2em;
+  border: 1em black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+
+}
+
+#quote {
+  float: left;
+  text-align: center;
+  color: azure;
+  border: 2em black; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1em;
+  
 }
